@@ -9,7 +9,7 @@ import (
 
 func init()  {
 	// Conf support YAML, JSON, TOML, Shell Environment
-	if err := configor.Load(&globals.Config, fmt.Sprintf("%s/../conf/config.json", argv.Program().Dir)); err != nil {
+	if err := configor.Load(&globals.Config, fmt.Sprintf("%s/../conf/config.yml", argv.Program().Dir)); err != nil {
 		panic(err)
 	}
 }

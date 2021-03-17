@@ -5,10 +5,9 @@ import (
 	"github.com/mix-go/di"
 )
 
-func Redis() *redis.Client {
-	var client *redis.Client
+func Redis() (client *redis.Client) {
 	if err := di.Populate("redis", &client); err != nil {
 		panic(err)
 	}
-	return client
+	return
 }

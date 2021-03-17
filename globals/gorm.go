@@ -5,10 +5,9 @@ import (
 	"gorm.io/gorm"
 )
 
-func Gorm() *gorm.DB {
-	var db *gorm.DB
+func Gorm() (db *gorm.DB) {
 	if err := di.Populate("gorm", &db); err != nil {
 		panic(err)
 	}
-	return db
+	return
 }

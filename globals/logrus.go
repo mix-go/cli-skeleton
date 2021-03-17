@@ -5,10 +5,9 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func Logrus() *logrus.Logger {
-	var logger *logrus.Logger
+func Logrus() (logger *logrus.Logger) {
 	if err := di.Populate("logrus", &logger); err != nil {
 		panic(err)
 	}
-	return logger
+	return
 }
