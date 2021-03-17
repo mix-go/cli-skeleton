@@ -1,8 +1,8 @@
 package globals
 
 import (
-	"github.com/jinzhu/gorm"
 	"github.com/mix-go/di"
+	"gorm.io/gorm"
 )
 
 func Gorm() *gorm.DB {
