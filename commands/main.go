@@ -1,14 +1,14 @@
 package commands
 
 import (
-	"github.com/mix-go/cli"
+	"github.com/mix-go/xcli"
 )
 
-var Commands = []*cli.Command{
+var Commands = []*xcli.Command{
 	{
 		Name:  "hello",
 		Usage: "\tEcho demo",
-		Options: []*cli.Option{
+		Options: []*xcli.Option{
 			{
 				Names: []string{"n", "name"},
 				Usage: "Your name",

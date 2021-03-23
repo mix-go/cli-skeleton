@@ -2,7 +2,7 @@ package dotenv
 
 import (
 	"fmt"
-	"github.com/mix-go/cli/argv"
+	"github.com/mix-go/xcli/argv"
 	"github.com/mix-go/dotenv"
 )
 

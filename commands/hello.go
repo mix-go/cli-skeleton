@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	"github.com/mix-go/cli/flag"
+	"github.com/mix-go/xcli/flag"
 )
 
 type HelloCommand struct {

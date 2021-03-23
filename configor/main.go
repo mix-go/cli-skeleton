@@ -3,7 +3,7 @@ package configor
 import (
 	"fmt"
 	"github.com/jinzhu/configor"
-	"github.com/mix-go/cli/argv"
+	"github.com/mix-go/xcli/argv"
 	"github.com/mix-go/cli-skeleton/globals"
 )
 

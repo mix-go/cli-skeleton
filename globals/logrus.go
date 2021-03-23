@@ -1,12 +1,12 @@
 package globals
 
 import (
-	"github.com/mix-go/di"
+	"github.com/mix-go/xdi"
 	"github.com/sirupsen/logrus"
 )
 
 func Logrus() (logger *logrus.Logger) {
-	if err := di.Populate("logrus", &logger); err != nil {
+	if err := xdi.Populate("logrus", &logger); err != nil {
 		panic(err)
 	}
 	return

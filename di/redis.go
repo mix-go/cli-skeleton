@@ -2,13 +2,13 @@ package di
 
 import (
 	"github.com/go-redis/redis/v8"
-	"github.com/mix-go/di"
+	"github.com/mix-go/xdi"
 	"github.com/mix-go/dotenv"
 	"time"
 )
 
 func init() {
-	obj := di.Object{
+	obj := xdi.Object{
 		Name: "redis",
 		New: func() (i interface{}, e error) {
 			opt := redis.Options{
@@ -20,7 +20,7 @@ func init() {
 			return redis.NewClient(&opt), nil
 		},
 	}
-	if err := di.Provide(&obj); err != nil {
+	if err := xdi.Provide(&obj); err != nil {
 		panic(err)
 	}
 }
