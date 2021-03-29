@@ -11,3 +11,12 @@ go get -u github.com/mix-go/xstart
 ~~~
 xstart new hello
 ~~~
+
+~~~
+ Use the arrow keys to navigate: ↓ ↑ → ← 
+ ? Select project type:
+   ▸ CLI
+     API
+     Web (contains the websocket)
+     gRPC
+ ~~~
