@@ -38,6 +38,7 @@ func init() {
 			}
 			return logger, nil
 		},
+		Singleton: true,
 	}
 	if err := xdi.Provide(&obj); err != nil {
 		panic(err)

@@ -1,8 +1,8 @@
 package di
 
 import (
-	"github.com/mix-go/xdi"
 	"github.com/mix-go/dotenv"
+	"github.com/mix-go/xdi"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -13,6 +13,7 @@ func init() {
 		New: func() (i interface{}, e error) {
 			return gorm.Open(mysql.Open(dotenv.Getenv("DATABASE_DSN").String()))
 		},
+		Singleton: true,
 	}
 	if err := xdi.Provide(&obj); err != nil {
 		panic(err)

@@ -19,6 +19,7 @@ func init() {
 			}
 			return redis.NewClient(&opt), nil
 		},
+		Singleton: true,
 	}
 	if err := xdi.Provide(&obj); err != nil {
 		panic(err)

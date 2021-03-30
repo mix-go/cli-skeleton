@@ -39,13 +39,16 @@ func init() {
 					EncodeDuration: zapcore.StringDurationEncoder,
 					EncodeCaller:   zapcore.ShortCallerEncoder,
 				}),
-				zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout),
-					w),
-				zap.DebugLevel,
+				zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout), w),
+				zap.InfoLevel,
 			)
 			logger := zap.New(core, zap.AddCaller())
+			if xcli.App().Debug {
+				logger.Core().Enabled(zap.DebugLevel)
+			}
 			return logger.Sugar(), nil
 		},
+		Singleton: true,
 	}
 	if err := xdi.Provide(&obj); err != nil {
 		panic(err)
