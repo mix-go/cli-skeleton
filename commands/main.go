@@ -7,15 +7,15 @@ import (
 var Commands = []*xcli.Command{
 	{
 		Name:  "hello",
-		Usage: "\tEcho demo",
+		Short: "\tEcho demo",
 		Options: []*xcli.Option{
 			{
 				Names: []string{"n", "name"},
-				Usage: "Your name",
+				Short: "Your name",
 			},
 			{
 				Names: []string{"say"},
-				Usage: "\tSay ...",
+				Short: "\tSay ...",
 			},
 		},
 		RunI: &HelloCommand{},
