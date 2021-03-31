@@ -25,3 +25,10 @@ func init() {
 		panic(err)
 	}
 }
+
+func Redis() (client *redis.Client) {
+	if err := xdi.Populate("redis", &client); err != nil {
+		panic(err)
+	}
+	return
+}

@@ -44,3 +44,10 @@ func init() {
 		panic(err)
 	}
 }
+
+func Logrus() (logger *logrus.Logger) {
+	if err := xdi.Populate("logrus", &logger); err != nil {
+		panic(err)
+	}
+	return
+}
