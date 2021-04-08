@@ -6,16 +6,16 @@ import (
 
 var Commands = []*xcli.Command{
 	{
-		Name:  "hello",
-		Short: "\tEcho demo",
+		Name:   "hello",
+		Short:  "\tEcho demo",
 		Options: []*xcli.Option{
 			{
 				Names: []string{"n", "name"},
-				Short: "Your name",
+				Usage: "Your name",
 			},
 			{
 				Names: []string{"say"},
-				Short: "\tSay ...",
+				Usage: "\tSay ...",
 			},
 		},
 		RunI: &HelloCommand{},
